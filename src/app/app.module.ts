@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
-import { ServiceComponent } from './service/service.component';
 import { TeacherSpaceComponent } from './teacher-space/teacher-space.component';
 import { MySpaceComponent } from './my-space/my-space.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -15,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShowComponent } from './show/show.component';
 
 
 @NgModule({
@@ -22,10 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     AuthComponent,
     HomeComponent,
-    ServiceComponent,
     TeacherSpaceComponent,
     MySpaceComponent,
-    NavBarComponent
+    NavBarComponent,
+    ShowComponent
   ],
   imports: [
     BrowserAnimationsModule,

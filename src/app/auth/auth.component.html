@@ -1,24 +1,23 @@
-
 <section class="vh-100 gradient-custom">
 
   <div class="card-body p-5 text-center" style="width: 500px; margin-left:500px;margin-bottom:50px">
 
     <h1 class="mb-5" style="margin-top:100px ;">Sign in</h1>
 
-    <form class="example-form">
+    <form class="example-form" #authForm="ngForm" (ngSubmit)="auth(authForm)">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="faical@gmail.com or miss douar email" value="">
+        <input matInput placeholder="example@gmail.com" name="username" ngModel='username' required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Ex. faicalruel987$" value="">
+        <input matInput placeholder="Ex. azerty1979$" name="password" ngModel='password' required>
       </mat-form-field>
-
+      <button mat-raised-button type="submit">Login</button>
     </form>
 
-    <button mat-button>Login</button>
+
 
   </div>
 </section>
