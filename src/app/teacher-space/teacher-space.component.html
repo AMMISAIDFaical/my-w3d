@@ -1,0 +1,88 @@
+<mat-tab-group mat-align-tabs="center" style="background-color:lightgrey">
+  <mat-tab label="Blender">
+
+    <div class="bg-image p-5 text-center"
+      style="background-image: url('{{blender_image_src}}'); height:650px;background-size:cover;">
+      <h1 class="mb-3 h2">Blender HomeWork</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  task about getting started with blender and making some 3d shapes do disply later on in web page
+                </p>
+                <div *ngFor="let item of myBlenderExamples" class="card"
+                  style="height: 150px;width:350px;position: relative;left: 15%; margin-top:10%;">
+                  <ul class="list-group list-group-light">
+                    <li class="list-group-item px-3">alias Tp : {{item.Name}}</li>
+                    <li class="list-group-item px-3">fais le : {{item.Date}}</li>
+                    <li class="list-group-item px-3">
+                      <a href="{{item.linkToGitub}}"
+                        class="btn btn-primary stretched-link">
+                        Link to Github repo
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </mat-tab>
+
+  <mat-tab label="Unity & C#">
+
+    <div class="bg-image p-5 text-center"
+      style="background-image: url('{{unity_image_src}}'); height:650px;background-size:cover;">
+      <h1 class="mb-3 h2">Unity HomeWork</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  task about getting started with unity and c# and making some 3d shapes do disply later on in web page
+                </p>
+
+                <div *ngFor="let item of myUnityExamples" class="card"
+                  style="height: 150px;width:350px;position: relative;left: 15%;">
+                  <ul class="list-group list-group-light">
+                    <li class="list-group-item px-3">alias Tp : {{item}}</li>
+                    <li class="list-group-item px-3">fais le : {{item}}</li>
+                    <li class="list-group-item px-3"><a href="{{item.linkToGitub}}"
+                        class="btn btn-primary stretched-link">
+                        Link to Github repo</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </mat-tab>
+
+
+</mat-tab-group>

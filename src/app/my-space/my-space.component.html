@@ -1,0 +1,103 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Blender">
+
+    <div class="bg-image p-5 text-center"
+      style="background-image: url('{{blender_image_src}}'); height:650px;background-size:cover;">
+      <h1 class="mb-3 h2">Blender HomeWork</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+
+            <div class="card">
+              <div class="card-body">
+                <form #homeworkForm="ngForm" (ngSubmit)="addwork(homeworkForm)">
+                  <h2>Post Blender Homework</h2>
+                  <div class="form-group">
+
+                    <mat-form-field appearance="fill">
+                      <mat-label>home work name</mat-label>
+                      <input matInput placeholder="ex:Tp1 blender cube shape .." type="text" name="name" ngModel='name'
+                        required>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="fill">
+                      <mat-label>home work date</mat-label>
+                      <input matInput placeholder="ex:12-12-2022 .." type="date" name="date" ngModel='date' required>
+                    </mat-form-field>
+
+
+                    <mat-form-field style="width:400px ;" appearance="fill">
+                      <mat-label>download link</mat-label>
+                      <input matInput placeholder="ex:www.blenderdownload" type="url" name="link"
+                        ngModel='downloadLink' required>
+                    </mat-form-field>
+                  </div>
+                  <button mat-raised-button type="submit">Submit</button>
+
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </mat-tab>
+
+  <mat-tab label="Unity & C#">
+
+    <div class="bg-image p-5 text-center"
+      style="background-image: url('{{unity_image_src}}'); height:650px;background-size:cover;">
+      <h1 class="mb-3 h2">Unity HomeWork</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+
+            <div class="card">
+              <div class="card-body">
+                <form #homeworkForm="ngForm" (ngSubmit)="addwork(homeworkForm)">
+                  <h2>Post Unity Homework</h2>
+                  <div class="form-group">
+
+                    <mat-form-field appearance="fill">
+                      <mat-label>home work name</mat-label>
+                      <input matInput placeholder="ex:Tp1 unity cube shape .." type="text" name="name" ngModel='name'
+                        required>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="fill">
+                      <mat-label>home work date</mat-label>
+                      <input matInput placeholder="ex:12-12-2022 .." type="date" name="date" ngModel='date' required>
+                    </mat-form-field>
+
+
+                    <mat-form-field style="width:400px ;" appearance="fill">
+                      <mat-label>home work github link</mat-label>
+                      <input matInput placeholder="ex:www.github/repo/unity" type="url" name="link" ngModel='githubLink'
+                        required>
+                    </mat-form-field>
+                  </div>
+                  <button mat-raised-button type="submit">Submit</button>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </mat-tab>
+
+</mat-tab-group>
