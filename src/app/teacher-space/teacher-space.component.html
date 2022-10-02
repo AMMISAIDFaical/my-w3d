@@ -1,8 +1,8 @@
-<mat-tab-group mat-align-tabs="center" style="background-color:lightgrey">
+<mat-tab-group mat-align-tabs="center" style="background-color:rgb(255, 255, 255);" >
   <mat-tab label="Blender">
 
     <div class="bg-image p-5 text-center"
-      style="background-image: url('{{blender_image_src}}'); height:650px;background-size:cover;">
+      style="background-image: url('{{blender_image_src}}'); height:650px;background-size:cover;margin: 0; height: 100%; overflow: hidden">
       <h1 class="mb-3 h2">Blender HomeWork</h1>
 
       <div class="container">
@@ -11,25 +11,27 @@
 
             <div class="card">
               <div class="card-body">
-                <p class="card-text">
-                  task about getting started with blender and making some 3d shapes do disply later on in web page
-                </p>
-                <div *ngFor="let item of myBlenderExamples" class="card"
-                  style="height: 150px;width:350px;position: relative;left: 15%; margin-top:10%;">
-                  <ul class="list-group list-group-light">
-                    <li class="list-group-item px-3">alias Tp : {{item.Name}}</li>
-                    <li class="list-group-item px-3">fais le : {{item.Date}}</li>
+                <div class="card" style="height: 150px;width:350px;position:relative;top:10%">
+                  <ul class="list-group list-group-light" *ngFor="let item of myBlenderExamples">
+                    <li class="list-group-item px-3">alias Tp : {{item.name}}</li>
+                    <li class="list-group-item px-3">fais le : {{item.date}} </li>
                     <li class="list-group-item px-3">
-                      <a href="https://drive.google.com/file/d/1taZx5e5p6IPB1GZgZpz3Nz5sP1MxebDn/view?usp=sharing"
-                        class="btn btn-primary stretched-link">
-                        Get Homework
+                      <p class="card-text">
+                        task about getting started with blender and making some 3d shapes do disply later on in web page
+                      </p>
+                    </li>
+                    <li class="list-group-item px-3"><a href="{{item.linkToDownload}}"
+                        class="btn btn-primary stretched-link">Get Homework
                       </a>
+                      <img class="img-fluid rounded"
+                        src="https://drive.google.com/uc?export=view&id={{item.imagePath}}">
+
                     </li>
                   </ul>
                 </div>
-
               </div>
             </div>
+
 
           </div>
 
@@ -39,13 +41,12 @@
 
     </div>
 
-
   </mat-tab>
 
   <mat-tab label="Unity & C#">
 
     <div class="bg-image p-5 text-center"
-      style="background-image: url('{{unity_image_src}}'); height:650px;background-size:cover;">
+      style="background-image: url('{{unity_image_src}}'); height:650px;background-size:cover;margin: 0; height: 100%; overflow: hidden">
       <h1 class="mb-3 h2">Unity HomeWork</h1>
 
       <div class="container">
@@ -54,33 +55,31 @@
 
             <div class="card">
               <div class="card-body">
-                <p class="card-text">
-                  task about getting started with unity and c# and making some 3d shapes do disply later on in web page
-                </p>
-
-                <div *ngFor="let item of myUnityExamples" class="card"
-                  style="height: 150px;width:350px;position: relative;left: 15%;">
-                  <ul class="list-group list-group-light">
-                    <li class="list-group-item px-3">alias Tp : {{item.Name}}</li>
-                    <li class="list-group-item px-3">fais le : {{item.Date}}</li>
-                    <li class="list-group-item px-3"><a href="https://drive.google.com/file/d/1taZx5e5p6IPB1GZgZpz3Nz5sP1MxebDn/view?usp=sharing"
-                        class="btn btn-primary stretched-link">
-                        Get Homework</a>
+                <div class="card" style="height: 150px;width:350px;position:relative;top:10%">
+                  <ul class="list-group list-group-light" *ngFor="let item of myUnityExamples">
+                    <li class="list-group-item px-3">alias Tp : {{item.name}}</li>
+                    <li class="list-group-item px-3">fais le : {{item.date}} </li>
+                    <li class="list-group-item px-3">
+                      <p class="card-text">
+                        task about getting started with blender and making some 3d shapes do disply later on in web page
+                      </p>
+                    </li>
+                    <li class="list-group-item px-3"><a href="{{item.linkToDownload}}"
+                        class="btn btn-primary stretched-link">Get Homework
+                      </a>
+                      <img class="img-fluid rounded"
+                        src="https://drive.google.com/uc?export=view&id={{item.imagePath}}">
                     </li>
                   </ul>
                 </div>
-
               </div>
             </div>
           </div>
-
-
 
         </div>
       </div>
 
     </div>
-
 
   </mat-tab>
 

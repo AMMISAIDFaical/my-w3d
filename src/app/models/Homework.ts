@@ -2,11 +2,14 @@ export class Homework {
   Name!: string;
   Description!: string;
   Date!: string;
-  linkToGitub!: string;
-  constructor(Name: string, Description: string, Date: string, linkToGithub: string) {
+  linkToDownload!: string;
+  imagePath!: string;
+
+  constructor(Name: string, Description: string, Date: string, linkToDownload: string,imagePath:string) {
     this.Name = Name;
     this.Description = Description;
     this.Date = Date;
-    this.linkToGitub =linkToGithub;
+    this.linkToDownload =linkToDownload;
+    this.imagePath = imagePath;
   }
 }

@@ -4,8 +4,15 @@ li{
 
 span {
   position: relative;
-  left: 900px;
+  left: 750px;
 }
 a{
-  color: aliceblue;
+  color: lightgoldenrodyellow;
+}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity:0.5;
+  text-decoration:none;
 }

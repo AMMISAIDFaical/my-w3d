@@ -7,12 +7,12 @@
     <form class="example-form" #authForm="ngForm" (ngSubmit)="auth(authForm)">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="example@gmail.com" name="username" ngModel='username' required>
+        <input matInput placeholder="example@gmail.com" type="email" name="email" ngModel='email' required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Ex. azerty1979$" name="password" ngModel='password' required>
+        <input matInput placeholder="Ex. azerty1979$" type="password" name="password" ngModel='password' required>
       </mat-form-field>
       <button mat-raised-button type="submit">Login</button>
     </form>

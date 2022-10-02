@@ -1,27 +1,32 @@
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg" style="background-color:lightslategrey;">
-    <div class="container-fluid" >
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/auth">Faiçal W3D Website</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color:lightslategrey;">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarExample01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Faiçal W3D Website</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/teacher-space" class="nav-link">Teacher space</a>
+        </li>
+
+        <li routerLink="active" class="nav-item">
+          <a routerLink="/my-space" class="nav-link">My space</a>
+        </li>
+        <span>
+          <li routerLink="active" class="nav-item">
+            <a routerLink="/auth" class="nav-link">Sign in</a>
           </li>
+        </span>
+        <span>
           <li class="nav-item">
-            <a class="nav-link" href="/auth" >Home</a>
+            <a routerLink="/auth" (click)="logout()" class="nav-link">Logout</a>
           </li>
-
-            <a class="nav-link" href="/teacher-space">Teacher Space</a>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/my-space">My Space</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/auth"><span>Sign in</span></a>
-          </li>
-
-        </ul>
-      </div>
+        </span>
+      </ul>
     </div>
-  </nav>
-  <!-- Navbar -->
+  </div>
+</nav>
+<!-- Navbar -->

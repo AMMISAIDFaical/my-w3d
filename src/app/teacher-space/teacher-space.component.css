@@ -14,9 +14,15 @@ p{
   font-weight: bold;
 
 }
-.card { background-color: rgba(245, 245, 245, 0.4); position: relative;left: 30%; width: 500px; height: 500px; }
+.card { background-color: rgba(245, 245, 245, 0.4); position: relative;left: 10%; width: 1000px; height: 500px; }
 .card-header, .card-footer { opacity: 1}
-
+img{
+  height:400px ;
+  width:450px;
+  position: relative;
+  left: 120%;
+  bottom: 490%;
+}
 button
 {
   background-color: lightgreen;
@@ -29,7 +35,7 @@ a{
 }
 li{
   background-color: rgb(138, 203, 225);
-  height: 70px;
+  height: 90px;
   color: black;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;

@@ -1,6 +1,7 @@
-import { User } from './../models/User';
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { IUser } from '../models/IUser';
 
 @Component({
   selector: 'app-auth',
@@ -9,16 +10,23 @@ import { NgForm } from '@angular/forms';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
-  auth(form: NgForm):void{
-    const User : User = {
-        'username':form.value.username,
-        'password':form.value.password
+  constructor(private auth_serv: AuthService) {
+  }
+  auth(form: NgForm): void {
+    let user:IUser =
+    {
+      'email': form.value.email,
+      'password': form.value.password,
+      username:'faical'
     }
-    console.log(User.username);
-    console.log(User.password);
+    this.auth_serv.loginService(user);
+    console.log(this.auth_serv.isLoggedIn());
   }
   ngOnInit(): void {
-  }
+    console.log(this.auth_serv.isLoggedIn());
+    console.log(this.auth_serv.getUser());
+    console.log(this.auth_serv.getUser());
+
+   }
 
 }

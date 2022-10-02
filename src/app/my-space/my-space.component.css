@@ -1,6 +1,6 @@
 h1
 {
-  color:lightgoldenrodyellow
+  color:lightgreen;
 }
 .card-title
 {
@@ -16,7 +16,7 @@ input{
   font-weight: bold;
 
 }
-.card { background-color: rgba(245, 245, 245, 0.4); position: relative;left: 30%; width: 500px; height: 350px; }
+.card { background-color: rgba(245, 245, 245, 0.4); position: relative;left: 30%; width: 500px; height: 600px; }
 .card-header, .card-footer { opacity: 1}
 
 button
@@ -30,11 +30,11 @@ button
 
 .bg-image
 {
-  height:650px;background-size:cover;
+  height:750px;background-size:cover;
 }
 .mat-tab-group
 {
-  background-color:lightsteelblue
+  background-color:lightcyan
 }
 
 
@@ -43,4 +43,8 @@ button
   margin: 2%;
   color: aliceblue;
   font-size: large;
+}
+.mat-tab
+{
+  font-family: fantasy;
 }

@@ -1,6 +1,7 @@
+import { AuthGuard } from './services/auth.guard';
+import { HomeworkService } from './services/homework.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
@@ -15,7 +16,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShowComponent } from './show/show.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,10 @@ import { ShowComponent } from './show/show.component';
     MatTabsModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
-
-  ],
-  providers: [],
+    FormsModule,
+    HttpClientModule
+   ],
+  providers: [HomeworkService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,5 @@
+import { IHomework } from './../models/IHomework';
+import { HomeworkService } from './../services/homework.service';
 import { Component, OnInit } from '@angular/core';
 import { Homework } from '../models/Homework';
 
@@ -8,21 +10,32 @@ import { Homework } from '../models/Homework';
 })
 export class TeacherSpaceComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private _homeworkService: HomeworkService) { }
 
   blender_image_src = "/assets/images/blender.png";
   unity_image_src = "/assets/images/csharp_unity.jpg";
+  myBlenderExamples: IHomework[] = [];
+  myUnityExamples: IHomework[] = [];
 
-  UnityComment?: string;
-
-  myBlenderExamples: Homework[] = [new Homework("b1","blender","2022-12-12","link down 1")];
-
-  myUnityExamples: Homework[] = [new Homework("u1","unity","2022-10-12","link down 6")];
+  getallBlender() {
+    this._homeworkService.getAllBlenderHomework().subscribe(
+      homeworks => {
+        this.myBlenderExamples = homeworks;
+      }
+    );
+  }
 
   getallUnity() {
-
+    this._homeworkService.getAllUnityHomework().subscribe(
+      homeworks => {
+        this.myUnityExamples = homeworks;
+      }
+    );
   }
 
   ngOnInit(): void {
+    this.getallBlender();
+    this.getallUnity();
   }
 }
